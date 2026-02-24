@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="crud">
+        <!-- header -->
+        <div class="header">
+            <h2>CRUD</h2>
+            <p>PRODUCT MANAGMENT SYSTEM</p>
+
+        </div>
+        <!-- /header -->
+
+            <!-- inputs -->
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <div class="price">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="Price" >
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes" >
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads" >
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount" >
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="Count">
+            <input type="text" id="category" placeholder="Category">
+            <button id="submit">Create Product</button>
+        </div>
+            <!-- /inputs -->
+
+            <!-- outputs -->
+        <div class="outputs">
+            <div class="search-block">
+                <input type="text" id="search" onkeyup="searchData(this.value)" placeholder="Search">
+                <div class="btn-search">
+                    <button onclick="getSearchMood(this.id)" id="search-title">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="search-category">Search By Category</button>
+                </div>
+            </div>
+        </div>
+            <!-- /outputs -->
+
+            <!-- delet all -->
+        <div id="deletAll">
+            
+        </div>
+            <!-- /delet all -->
+
+            <!-- table -->
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Taxes</th>
+                <th>Ads</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>Category</th>
+            </tr>
+
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+            <!-- /table -->
+
+
+
+
+    </div>
+    
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
